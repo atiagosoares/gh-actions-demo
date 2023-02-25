@@ -1,84 +1,81 @@
 {
-    "taskDefinition": {
-        "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/test-task:1",
-        "containerDefinitions": [
-            {
-                "name": "hello-world",
-                "image": "358737600086.dkr.ecr.us-east-1.amazonaws.com/gh-actions-demo/hello:latest",
-                "cpu": 0,
-                "portMappings": [
-                    {
-                        "containerPort": 80,
-                        "hostPort": 80,
-                        "protocol": "tcp",
-                        "name": "hello-world-80-tcp",
-                        "appProtocol": "http"
-                    }
-                ],
-                "essential": true,
-                "environment": [],
-                "environmentFiles": [],
-                "mountPoints": [],
-                "volumesFrom": [],
-                "logConfiguration": {
-                    "logDriver": "awslogs",
-                    "options": {
-                        "awslogs-create-group": "true",
-                        "awslogs-group": "/ecs/test-task",
-                        "awslogs-region": "sa-east-1",
-                        "awslogs-stream-prefix": "ecs"
-                    }
+    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/test-task:1",
+    "containerDefinitions": [
+        {
+            "name": "hello-world",
+            "image": "358737600086.dkr.ecr.us-east-1.amazonaws.com/gh-actions-demo/hello:latest",
+            "cpu": 0,
+            "portMappings": [
+                {
+                    "containerPort": 80,
+                    "hostPort": 80,
+                    "protocol": "tcp",
+                    "name": "hello-world-80-tcp",
+                    "appProtocol": "http"
+                }
+            ],
+            "essential": true,
+            "environment": [],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-create-group": "true",
+                    "awslogs-group": "/ecs/test-task",
+                    "awslogs-region": "sa-east-1",
+                    "awslogs-stream-prefix": "ecs"
                 }
             }
-        ],
-        "family": "test-task",
-        "executionRoleArn": "arn:aws:iam::358737600086:role/ecsTaskExecutionRole",
-        "networkMode": "awsvpc",
-        "revision": 1,
-        "volumes": [],
-        "status": "ACTIVE",
-        "requiresAttributes": [
-            {
-                "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-            },
-            {
-                "name": "ecs.capability.execution-role-awslogs"
-            },
-            {
-                "name": "com.amazonaws.ecs.capability.ecr-auth"
-            },
-            {
-                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-            },
-            {
-                "name": "ecs.capability.execution-role-ecr-pull"
-            },
-            {
-                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-            },
-            {
-                "name": "ecs.capability.task-eni"
-            },
-            {
-                "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
-            }
-        ],
-        "placementConstraints": [],
-        "compatibilities": [
-            "EC2",
-            "FARGATE"
-        ],
-        "runtimePlatform": {
-            "cpuArchitecture": "X86_64",
-            "operatingSystemFamily": "LINUX"
+        }
+    ],
+    "family": "test-task",
+    "executionRoleArn": "arn:aws:iam::358737600086:role/ecsTaskExecutionRole",
+    "networkMode": "awsvpc",
+    "revision": 1,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
         },
-        "requiresCompatibilities": [
-            "FARGATE"
-        ],
-        "cpu": "1024",
-        "memory": "2048",
-        "registeredAt": "2023-02-25T16:23:26.399000-03:00",
-        "registeredBy": "arn:aws:iam::358737600086:user/atiagosoares"
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        },
+        {
+            "name": "ecs.capability.task-eni"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.29"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EC2",
+        "FARGATE"
+    ],
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
     },
-    "tags": []
+    "requiresCompatibilities": [
+        "FARGATE"
+    ],
+    "cpu": "1024",
+    "memory": "2048",
+    "registeredAt": "2023-02-25T16:23:26.399000-03:00",
+    "registeredBy": "arn:aws:iam::358737600086:user/atiagosoares"
 }
