@@ -1,16 +1,16 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/test-task:2",
+    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/gh-actions-demo-task:1",
     "containerDefinitions": [
         {
             "name": "hello-world",
-            "image": "358737600086.dkr.ecr.sa-east-1.amazonaws.com/gh-actions-demo/hello-world:latest",
+            "image": "358737600086.dkr.ecr.sa-east-1.amazonaws.com/gh-actions-demo/hello-world",
             "cpu": 0,
             "portMappings": [
                 {
+                    "name": "hello-world-80-tcp",
                     "containerPort": 80,
                     "hostPort": 80,
                     "protocol": "tcp",
-                    "name": "hello-world-80-tcp",
                     "appProtocol": "http"
                 }
             ],
@@ -23,17 +23,17 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/test-task",
+                    "awslogs-group": "/ecs/gh-actions-demo-task",
                     "awslogs-region": "sa-east-1",
                     "awslogs-stream-prefix": "ecs"
                 }
             }
         }
     ],
-    "family": "test-task",
+    "family": "gh-actions-demo-task",
     "executionRoleArn": "arn:aws:iam::358737600086:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 2,
+    "revision": 1,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -67,15 +67,16 @@
         "EC2",
         "FARGATE"
     ],
-    "runtimePlatform": {
-        "cpuArchitecture": "X86_64",
-        "operatingSystemFamily": "LINUX"
-    },
     "requiresCompatibilities": [
         "FARGATE"
     ],
     "cpu": "1024",
     "memory": "2048",
-    "registeredAt": "2023-02-25T17:12:36.109000-03:00",
-    "registeredBy": "arn:aws:iam::358737600086:user/atiagosoares"
+    "runtimePlatform": {
+        "cpuArchitecture": "X86_64",
+        "operatingSystemFamily": "LINUX"
+    },
+    "registeredAt": "2023-02-25T20:19:23.760Z",
+    "registeredBy": "arn:aws:iam::358737600086:user/atiagosoares",
+    "tags": []
 }
