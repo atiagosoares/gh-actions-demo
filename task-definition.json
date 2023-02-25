@@ -1,9 +1,9 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/test-task:1",
+    "taskDefinitionArn": "arn:aws:ecs:sa-east-1:358737600086:task-definition/test-task:2",
     "containerDefinitions": [
         {
             "name": "hello-world",
-            "image": "358737600086.dkr.ecr.us-east-1.amazonaws.com/gh-actions-demo/hello:latest",
+            "image": "358737600086.dkr.ecr.sa-east-1.amazonaws.com/gh-actions-demo/hello-world:latest",
             "cpu": 0,
             "portMappings": [
                 {
@@ -33,7 +33,7 @@
     "family": "test-task",
     "executionRoleArn": "arn:aws:iam::358737600086:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
-    "revision": 1,
+    "revision": 2,
     "volumes": [],
     "status": "ACTIVE",
     "requiresAttributes": [
@@ -76,6 +76,6 @@
     ],
     "cpu": "1024",
     "memory": "2048",
-    "registeredAt": "2023-02-25T16:23:26.399000-03:00",
+    "registeredAt": "2023-02-25T17:12:36.109000-03:00",
     "registeredBy": "arn:aws:iam::358737600086:user/atiagosoares"
 }
